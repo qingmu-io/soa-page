@@ -1,3 +1,7 @@
+/**
+ * author: liuyi
+ * http request module
+ */
 angular.module('httpServiceModule',[])
 .factory('http',[function(){
 	return {
@@ -34,7 +38,7 @@ angular.module('httpServiceModule',[])
 				sufn(result);
 			},
 			error : function(jqXHR, textStatus, errorThrown){
-				
+				console.log(jqXHR, textStatus, errorThrown);
 				}
 		});
 		}
