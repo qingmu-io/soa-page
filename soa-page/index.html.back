@@ -70,20 +70,31 @@
     				  <ul class="nav2">
     				  	
      			    <li><a href="http://www.helloweba.com" target="_blank">首页</a></li>
-       					  <li><a href="javascript:void(0)">定时调度</a>
+       					  <li><a href="#">定时调度</a>
              		         <ul>
-            	    	 	<li><a href="#/jobs/1">作业一览</a></li>
+            	    	 	<li><a href="#">diaodu</a></li>
+               			  	<li><a href="#">PHP</a></li>
+               		   		<li><a href="#">MYSQL</a></li>
+             		        <li><a href="#">LINUX</a></li>
            			   </ul>
         		 </li>
-         			<li><a href="#">DUBBO监控</a></li>
-         			<li>
-         				<a href="#">系统设置</a></a>
-              		<ul>
-                   <li class="active"><a href="#/users/1">用户一览</a></li>
-                   <li><a href="#/roles/1">角色一览</a></li>
-                   <li><a href="#/resources/1">资源一览</a></li>
-             	 	</ul>
-         			</li>
+         		<li><a href="#">案例</a></li>
+         			<li><a href="#">文章</a></a>
+              <ul>
+                   <li class="active"><a href="http://www.helloweba.com/blog-4.html" target="_blank">XHTML/CSS</a></li>
+                   <li><a href="#">Javascript/Ajax/jQuery</a>
+                        <ul>
+                            <li><a href="#">Cookies</a></li>
+                            <li><a href="#">Event</a></li>
+                            <li><a href="#">Games</a></li>
+                            <li><a href="#">Images</a></li>
+                        </ul>
+                   </li>
+                   <li><a href="http://www.helloweba.com/blog-6.html" target="_blank">PHP/MYSQL</a></li>
+                   <li><a href="http://www.helloweba.com/blog-7.html" target="_blank">前端观察</a></li>
+                   <li><a href="http://www.helloweba.com/blog-9.html" target="_blank">HTML5/移动WEB应用</a></li>
+              </ul>
+         </li>
          <li><a href="http://www.helloweba.com/about.html" target="_blank">关于</a></li>
          
       </ul>
@@ -108,9 +119,8 @@
 	<script src="js/modules/http.js"></script>
 	<script  src="js/modules/sys/service/sysServiceModule.js"></script>
 	<script  src="js/modules/sys/controller/userControllerModule.js"></script>
-	<script  src="js/modules/quartz/service/quartzServiceModule.js"></script>
 	<script  src="js/modules/quartz/controller/quartzControllerModule.js"></script>
-
+	<script  src="js/modules/quartz/service/quartzServiceModule.js"></script>
 	<script  src="js/modules/filter.js"></script>
 	<script  src="js/modules/directive.js"></script>
 	<script src="js/commons/validata/login_validata.js"></script>

@@ -8,10 +8,8 @@ angular.module('userControllerModule',['sysServiceModule'])
 	angular.element('#login').bind('click',function(){
 		var isPass = Validata.valiForm(document.forms[0]);
 		if(isPass){
-			var r = userService.login($scope.user);
-			console.log(r)
-//			 if(.success)
-//				 window.location="/soa-rest/index.html";
+			 if(userService.login($scope.user).success)
+				 window.location="/index.html";
 		}
 	});
 	
@@ -19,16 +17,12 @@ angular.module('userControllerModule',['sysServiceModule'])
 
 .controller('users',['$scope','userService','$routeParams'
                ,function($scope,userService,$routeParams){
-	SOA.page = $routeParams.page;
-	$scope.user={username:'',phone:''};
-	$scope.metas = ['姓名','邮箱','电话号码','状态','管理员','创建时间'];
-	 userService.page($scope.user,function(result){
-	 	SOA.CTX = $scope.context = result;
-		$scope.users = SOA.CTX.rows;
-		SOA.path='users';
-	});
-	
-		/*console.log(userService.page($scope.user));*/
+               	$scope.user={username:'',phone:''};
+				$scope.user.page = $routeParams.page;
+				$scope.metas = ['姓名','邮箱','电话号码','状态','管理员','创建时间'];
+	 			$scope.context = SoaContext = userService.page($scope.user);
+				console.log(SoaContext);
+				SoaContext.path = "users";
 }])
 
 .controller('userAdd',['$scope','userService',function($scpoe,userService){
@@ -43,8 +37,9 @@ angular.module('userControllerModule',['sysServiceModule'])
 .controller('moduleController',function($scope){
 	$scope.indexName = '调度管理';
 	$scope.modules = [
-	                  {id:'adfadasdfa',name : '调度管理',menus:[{name:'调度设置',url:'/index'},{name:'调度告警',url:'/index'}]}
-	                 ,{id:'sdfafdafdas',name : '用户管理',menus:[{name:'角色设置',url:'/index'},{name:'权限设置',url:'/index'}]}
+	                  {id:'sdfafdafdas',name : '用户管理',menus:[{name:'角色设置',url:'/index'},{name:'权限设置',url:'/index'}]}		
+	                  ,{id:'adfadasdfa',name : '调度管理',menus:[{name:'调度设置',url:'/index'},{name:'调度告警',url:'/index'}]}
+	                 
 	];
 })
 

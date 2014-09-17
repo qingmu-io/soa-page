@@ -1,0 +1,41 @@
+<div ng-controller="jobs">
+<div class="form-inline">
+	<fieldset >
+		<legend>作业一览</legend>
+			<label >作业名称 <input type="text" ng-model="user.username" class="input-small" /></label>
+			<label >分组<input type="TEXT" ng-model="user.phone" class="input-small" /></label>
+			<button class="btn" ng-click="page">提交</button>
+	</fieldset>
+</div>
+<div></div>
+<div>
+	<label><button class="btn btn-success">新增</button></label>
+</div>
+
+ <table class="table table-hover table-bordered table-condensed">
+	<thead>
+		<tr >
+			<th ng-repeat="meta in metas">{{meta}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="quartz in context.rows">
+			<td>{{quartz.jobName}}</td>
+			<td>{{quartz.jobGroup}}</td>
+			<td>{{quartz.triggerName}}</td>
+			<td>{{quartz.triggerGroup}}</td>
+			<td>{{quartz.cronExpression}}</td>
+			<td>{{quartz.status | status}}</td>
+			<td>{{quartz.createTime | dateformat}}</td>
+			<td>{{quartz.createAuthor}}</td>
+			<td>{{quartz.clazz}}</td>
+			<td>
+				<button id="puse" class="btn">暂停</button>
+				
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+</div>

@@ -1,0 +1,14 @@
+.demo{background:#f7f7f7}
+ul{list-style:none}
+.nav2 {font-family: "Microsoft yahei", Arial, Helvetica, sans-serif;} 
+ul.nav2 {padding: 0; margin: 0; font-size: 1em; line-height: 0.5em; list-style: none;} 
+ul.nav2 li {} 
+ul.nav2 li a {line-height: 10px; font-size: 14px; padding: 10px 5px; color: #000; display: block; text-decoration: none; font-weight: bolder;}
+ul.nav2 li a:hover {background-color:#675C7C;    color:white;}
+ul.nav2 ul { margin: 0; padding: 0;display: none;} 
+ul.nav2 ul li { margin: 0; padding: 0; clear: both;} 
+ul.nav2 ul li a { padding-left: 20px; font-size: 12px; font-weight: normal;}
+ul.nav2 ul li a:hover {background-color:#D3C99C; color:#675C7C;} 
+ul.nav2 ul ul li a {color:silver; padding-left: 40px;} 
+ul.nav2 ul ul li a:hover { background-color:#D3CEB8; color:#675C7C;} 
+ul.nav2 span{float:right;}

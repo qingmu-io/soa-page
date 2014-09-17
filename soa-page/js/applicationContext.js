@@ -1,10 +1,25 @@
 var sysUserTempRoot = 'template/sys/user/';
-var SOA = window.SOA = {};
+var quartzRoot ='template/quartz/'
+var SoaContext = window.SoaContext = {};
+var BaseUrl = {
+	sys:"http://localhost/sys-resource/sys/v1/",
+	quartz : "http://localhost/quartz-resource/quartz/v1/"
+}
+
+var Urls ={
+	
+	sys:{
+		login:BaseUrl.sys+"login",
+		users:BaseUrl.sys+"users"
+	}
+	,quartz :{
+		jobs : BaseUrl.quartz+"jobs"
+	}
+}
 
 
 
-
-angular.module('applicationContext',['ngRoute','userControllerModule','filterModule','soaDirective'])
+angular.module('applicationContext',['ngRoute','userControllerModule','quartzControllerModule','filterModule','soaDirective'])
 
 .config(function($routeProvider){
 	$routeProvider
@@ -18,10 +33,11 @@ angular.module('applicationContext',['ngRoute','userControllerModule','filterMod
 		controller:'userAdd',
 		templateUrl : sysUserTempRoot+'add.html'
 	})
-	
-	
 	//end 用户管理
-
+	.when('/jobs/:page',{
+		controller:'jobs',
+		templateUrl : quartzRoot+"list.html"
+	})
 	.otherwise({
         redirectTo: '/users/1'
     })

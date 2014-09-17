@@ -1,0 +1,63 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>演示：jQuery实现多级手风琴菜单</title>
+<meta name="keywords" content="多级下拉菜单, jquery插件" />
+<meta name="description" content="Helloweba演示平台，演示XHTML、CSS、jquery、PHP案例和示例" />
+<!--<link rel="stylesheet" type="text/css" href="css/nav.css" />-->
+<script type="text/javascript" src="js/lib/jquery.js"></script>
+<script type="text/javascript" src="js/lib/accordion.js"></script>
+<script type="text/javascript">
+$(function(){
+   $(".nav2").accordion({
+        //accordion: true,
+        speed: 500,
+	    closedSign: '[+]',
+		openedSign: '[-]'
+	});
+}); 
+</script>
+<style>
+
+</style>
+</head>
+
+<body>
+<div id="main">
+   <div class="demo">
+      <ul class="nav">
+         <li><a href="http://www.helloweba.com" target="_blank">首页</a></li>
+         <li><a href="#">服务</a>
+              <ul>
+                  <li><a href="#">JAVASCRIPT</a></li>
+                  <li><a href="#">PHP</a></li>
+                  <li><a href="#">MYSQL</a></li>
+                  <li><a href="#">LINUX</a></li>
+              </ul>
+         </li>
+         <li><a href="#">案例</a></li>
+         <li><a href="#">文章</a></a>
+              <ul>
+                   <li class="active"><a href="http://www.helloweba.com/blog-4.html" target="_blank">XHTML/CSS</a></li>
+                   <li><a href="#">Javascript/Ajax/jQuery</a>
+                        <ul>
+                            <li><a href="#">Cookies</a></li>
+                            <li><a href="#">Event</a></li>
+                            <li><a href="#">Games</a></li>
+                            <li><a href="#">Images</a></li>
+                        </ul>
+                   </li>
+                   <li><a href="http://www.helloweba.com/blog-6.html" target="_blank">PHP/MYSQL</a></li>
+                   <li><a href="http://www.helloweba.com/blog-7.html" target="_blank">前端观察</a></li>
+                   <li><a href="http://www.helloweba.com/blog-9.html" target="_blank">HTML5/移动WEB应用</a></li>
+              </ul>
+         </li>
+         <li><a href="http://www.helloweba.com/about.html" target="_blank">关于</a></li>
+      </ul>
+   </div>
+</div>
+
+</body>
+</html>
