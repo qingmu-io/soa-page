@@ -13,10 +13,23 @@ angular.module('quartzControllerModule',['quartzServiceModule'])
 				
 				SoaContext.path = "jobs";
 }])
-.controller('jobsAdd',['$scope','userService',function($scpoe,userService){
-		$scpoe.user={
-				
+.controller('jobsAdd',['$scope','quartzService',function($scpoe,userService){
+		$scpoe.job={
+				jobName :''
+				,jobGroup :''
+				,triggerName : ''
+				,triggerGroup :''
+				,status : ''
+				,classMeta :null
+				,clazz : ''
 		};
+		
+		$scpoe.$watch("job.jobName",function(){
+			console.log($scpoe.job);
+		})
+		$scpoe.submit = function(){
+			console.log(1);
+		}
 	/*	angular.element('#insert').bind('click',function(){
 			
 		});*/

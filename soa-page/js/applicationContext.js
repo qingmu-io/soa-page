@@ -38,6 +38,10 @@ angular.module('applicationContext',['ngRoute','userControllerModule','quartzCon
 		controller:'jobs',
 		templateUrl : quartzRoot+"list.html"
 	})
+	.when('/job/add',{
+		controller : 'jobsAdd',
+		templateUrl : quartzRoot+'add.html'
+	})
 	.otherwise({
         redirectTo: '/users/1'
     })

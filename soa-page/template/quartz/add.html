@@ -1,0 +1,62 @@
+<form class="form-inline form-horizontal">
+	<fieldset>
+		<legend>添加作业</legend>
+
+		<div class="control-group">
+			<label class="control-label" >作业名称</label>
+			<div class="controls">
+				<input  type="text" ng-model="job.jobName" /> <span class="help-inline"></span>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" >作业分组</label>
+			<div class="controls">
+				<input  type="password" ng-model="job.jobGroup" /> <span class="help-inline"></span>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" >触发器名称</label>
+			<div class="controls">
+				<input  type="text" ng-model="job.triggerName" /> <span class="help-inline"></span>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" >触发器分组</label>
+			<div class="controls">
+				<input  type="text" ng-model="job.triggerGroup" /> <span class="help-inline"></span>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" >状态</label>
+			<div class="controls">
+				<select ng-model="job.status"><option value="-1">暂停</option><option value="1">激活</option></select> <span class="help-inline"></span>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label">class文件</label>
+			<div class="controls">
+				<input type="file" class="webuploader-pick" ng-model="job.classMeta"><span class="help-inline"></span>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" >类全路径</label>
+			<div class="controls">
+				<input type="text" ng-model="job.clazz" /><span class="help-inline"></span>
+			</div>
+		</div>
+		
+			<div class="control-group">
+			<button class="btn" ng-submit>测试</button>
+			<div class="controls">
+				<input type="text" ng-model="job.clazz" /><span class="help-inline"></span>
+			</div>
+		</div>
+
+	</fieldset>
+</form>
