@@ -4,8 +4,11 @@ angular.module('quartzServiceModule',['httpServiceModule'])
 		return {
 			page : function(context){
 				var url = Urls.quartz.jobs+"/"+context.page;
-				console.log(context)
 				http.get(url,context,false,function(_context){context=_context});
+				return context;
+			}
+			,insert:function(context){
+				http.post(Urls.quartz.jobs,context,false,function(_context){context=_context});
 				return context;
 			}
 		};

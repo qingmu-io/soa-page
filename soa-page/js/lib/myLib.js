@@ -39,15 +39,14 @@ StringBuffer.prototype.toString = function() {
 
 !function($, window, undefined) {
 	window.Constants = window.Constants ||{};
-	Constants.root = '/soa-rest';
-	window.Validata = {};
+	window.Validate = {};
 	/**
 	 * 此方法是通用验证对象是否为空，如果不为空 则会调用预定义好的各自的判断
 	 * @param _this input对象
 	 * @param validateFn  验证function
 	 * @returns {Boolean}  验证通过返回true 未通过返回false
 	 */
-	Validata.vali = function(_this,validateFn){
+	Validate.vali = function(_this,validateFn){
 		if(!_this)return true;
 		if(_this.nodeName == 'RADIO') return true;
 		var val = $(_this).val();
@@ -75,10 +74,10 @@ StringBuffer.prototype.toString = function() {
 	 * 绑定表单验证
 	 * @param form
 	 */
-	Validata.bind = function(form){
+	Validate.bind = function(form){
 		$(Util.getFormName(form)).each(function(){
 			$(document).on('blur','input[name="'+this+'"]',function(){
-				Validata.vali(this,validata);
+				Validate.vali(this,validate);
 			});
 		});
 	};
@@ -86,10 +85,10 @@ StringBuffer.prototype.toString = function() {
 	 * 立即进行表单的验证操作
 	 * 如果全部验证通过返回true  否则返回false
 	 */
-	Validata.valiForm = function(form){
+	Validate.valiForm = function(form){
 		var isPass = true;
 		$(Util.getFormName(form)).each(function(){
-			var res = Validata.vali($('input[name="'+this+'"]').get(0), validata);
+			var res = Validate.vali($('input[name="'+this+'"]').get(0), validate);
 			if(!res){
 				isPass = false;
 			};
