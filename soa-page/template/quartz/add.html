@@ -40,12 +40,15 @@
 			<label class="control-label">cronExpression</label>
 			<div class="controls">
 				<input id="cronExpression" name="cronExpression"  type="text" ng-model="job.cronExpression" /> <span class="help-inline"></span>
+				<br />
+				<div><a id="help"  class="btn">help</a></div>
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label">类全路径</label>
 			<div class="controls">
 				<input id="clazz" name="clazz"  type="text" ng-model="job.clazz" /> <span class="help-inline"></span>
+					
 			</div>
 		</div>
 		
@@ -67,5 +70,12 @@
 </form>
 <script type="text/javascript">
 		Validate.bind(document.forms[0]);
+		$("#help").click(function(){
+			$("#myModal").modal({show:true});
+		});
+		$("#help").click(function(){
+			window.open('template/cronhelp/crontab.html')
+		})
 </script>
 <script src="../../js/modules/quartz/controller/validate.js"></script>
+

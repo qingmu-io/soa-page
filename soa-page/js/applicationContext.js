@@ -42,11 +42,15 @@ angular.module('applicationContext',['ngRoute','userControllerModule','quartzCon
 		controller : 'jobsAdd',
 		templateUrl : quartzRoot+'add.html'
 	})
+	
+	.when("/cronHelp",{
+		controller : 'help'
+		,templateUrl : 'template/cronhelp/crontab.html'
+	})
 	.otherwise({
         redirectTo: '/users/1'
     })
     ;
 })
-
 
 ;

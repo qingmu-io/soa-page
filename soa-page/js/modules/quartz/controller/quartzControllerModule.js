@@ -37,5 +37,5 @@ angular.module('quartzControllerModule',['quartzServiceModule'])
 			
 		});*/
 }])
-
+.controller('help',['$scope',function($scope){}])
 ;
