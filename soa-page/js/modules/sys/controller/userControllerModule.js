@@ -6,7 +6,7 @@ angular.module('userControllerModule',['sysServiceModule'])
 	 $scope.user = {username : '',password : ''};
 	 /*登录方法*/
 	angular.element('#login').bind('click',function(){
-		var isPass = Validata.valiForm(document.forms[0]);
+		var isPass = Validate.valiForm(document.forms[0]);
 		if(isPass){
 			 if(userService.login($scope.user).success)
 				 window.location="/index.html";

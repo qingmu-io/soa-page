@@ -77,6 +77,10 @@ StringBuffer.prototype.toString = function() {
 	Validate.bind = function(form){
 		$(Util.getFormName(form)).each(function(){
 			$(document).on('blur','input[name="'+this+'"]',function(){
+				if(validata){
+					
+				}
+				console.log(validata)
 				Validate.vali(this,validate);
 			});
 		});
@@ -88,6 +92,7 @@ StringBuffer.prototype.toString = function() {
 	Validate.valiForm = function(form){
 		var isPass = true;
 		$(Util.getFormName(form)).each(function(){
+			if(validata)
 			var res = Validate.vali($('input[name="'+this+'"]').get(0), validate);
 			if(!res){
 				isPass = false;
