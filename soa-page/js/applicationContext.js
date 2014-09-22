@@ -1,6 +1,7 @@
 var sysUserTempRoot = 'template/sys/user/';
 var quartzRoot ='template/quartz/'
 var SoaContext = window.SoaContext = {};
+window.limit = 10;
 var BaseUrl = {
 	sys:"http://localhost/sys-resource/sys/v1/",
 	quartz : "http://localhost/quartz-resource/quartz/v1/"
@@ -42,11 +43,15 @@ angular.module('applicationContext',['ngRoute','userControllerModule','quartzCon
 		controller : 'jobsAdd',
 		templateUrl : quartzRoot+'add.html'
 	})
-	
+	.when('/job/update/:id',{
+		controller : 'jobsUpdate',
+		templateUrl : quartzRoot+'add.html'
+	})
 	.when("/cronHelp",{
 		controller : 'help'
 		,templateUrl : 'template/cronhelp/crontab.html'
 	})
+	
 	.otherwise({
         redirectTo: '/users/1'
     })
